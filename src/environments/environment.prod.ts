@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  basicUrl: '//takkeh.wecan.jo/public',
-
+  basicUrl: 'https://waytodoctor.wecan.work/public/api/v1',
 };

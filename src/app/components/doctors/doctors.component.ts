@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { DoctorsService } from 'src/app/services/doctors.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-doctors',
@@ -9,16 +10,20 @@ import { DoctorsService } from 'src/app/services/doctors.service';
 })
 export class DoctorsComponent implements OnInit {
 
-  constructor(private ser : DoctorsService) { }
+  response: any;
+  basicUrl = "//waytodoctor.wecan.work/public";
+
+  constructor(private ser: DoctorsService) { }
 
   ngOnInit(): void {
+    this.getListFromService();
   }
   getListFromService() {
-    // return this.ser.getList().subscribe((res: any) => {
-    //   this.response = res.doctors;
-    //   console.log("this.response", this.response);
+    return this.ser.getList().subscribe((res: any) => {
+      this.response = res.data;
+      console.log("this.response", this.response);
 
-    // })
+    })
   }
 
   // owl-carousel 
@@ -29,17 +34,17 @@ export class DoctorsComponent implements OnInit {
     nav: false,
     autoWidth: true,
     rtl: true,
-    items:5,
-    margin:20,
-    autoplay:true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true,
+    items: 5,
+    margin: 20,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
-        items:1,
+        items: 1,
       },
       300: {
-        items:2,
+        items: 2,
       },
       600: {
         items: 3,
@@ -49,5 +54,5 @@ export class DoctorsComponent implements OnInit {
       },
     },
   };
-  
+
 }
