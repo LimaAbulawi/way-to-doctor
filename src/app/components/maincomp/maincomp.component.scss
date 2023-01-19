@@ -1,0 +1,24 @@
+.head img {
+    width: 100%;
+}
+
+.head .paragraph {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.head .paragraph button {
+    width: 200px;
+    border: none;
+    border-radius: 30px;
+    height: 37px;
+    background-color: #03314B;
+    color: white;
+}
+
+
+.footer{
+  background-color: #03314B;
+  color: white;
+}
