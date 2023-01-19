@@ -41,18 +41,29 @@ h2 {
 
 .shadow {
     &.top {
-      box-shadow: 0px -15px 10px -15px #03314B !important;    
+      box-shadow: 0px -15px 10px -15px #03314B !important;
     }
     &.bottom {
-      box-shadow: 0px 15px 10px -15px #03314B !important;    
+      box-shadow: 0px 15px 10px -15px #03314B !important;
     }
     &.left {
-      box-shadow: -15px 0px 10px -15px #03314B !important;    
+      box-shadow: -15px 0px 10px -15px #03314B !important;
     }
     &.right {
-      box-shadow: 15px 0px 10px -15px #03314B !important;    
+      box-shadow: 15px 0px 10px -15px #03314B !important;
     }
   }
   .slide img{
     margin-bottom: 10px;
     }
+
+    .footer {
+      padding-top: 200px !important;
+  }
+
+  .row.callus {
+      margin-bottom: -188px;
+  }
+  .owl-carousel.owl-rtl .owl-item {
+    padding: 10px;
+}
