@@ -17,8 +17,20 @@
     color: white;
 }
 
-
 .footer{
   background-color: #03314B;
   color: white;
+  // text-align: center;
+}
+.links {
+  display: flex;
+  justify-content: center;
+}
+.links2{
+  columns: 3;
+}
+.links img{
+  width: 168px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
