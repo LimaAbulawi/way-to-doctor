@@ -10,6 +10,7 @@ import { WorksComponent } from './components/works/works.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaincompComponent,
     DoctorsComponent,
     CallUsComponent,
-    WorksComponent
+    WorksComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
