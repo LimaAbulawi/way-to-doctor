@@ -1,10 +1,11 @@
-.team{
+.team {
     display: flex;
-    flex-wrap: wrap ; 
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.team .card{
+
+.team .card {
     margin: 10px;
     text-align: center;
     border: none;
@@ -15,17 +16,24 @@
     width: 27%;
 
 }
-.team .card img{
+
+.team .card img {
     height: 231px;
 }
-.team .card span{
+
+.team .card span {
     color: #fff;
-    font-weight: 600;}
+    font-weight: 600;
+}
 
 
-    p.card-text {opacity: 0 !important;}
+p.card-text {
+    opacity: 0 !important;
+}
 
-.card:hover .card-text {opacity: 1 !important;}
+.card:hover .card-text {
+    opacity: 1 !important;
+}
 
 p.card-text {
     position: absolute;
@@ -46,4 +54,14 @@ p.card-text {
 
 .team .card span {
     color: #fff;
+}
+
+.allteam .card {
+    margin: 10px 0px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 28px 0 #d5d5d5;
+    cursor: pointer;
 }
