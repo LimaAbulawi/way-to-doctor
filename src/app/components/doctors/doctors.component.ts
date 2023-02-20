@@ -21,8 +21,6 @@ export class DoctorsComponent implements OnInit {
   getListFromService() {
     return this.ser.getList().subscribe((res: any) => {
       this.response = res.data;
-      console.log("this.response", this.response);
-
     })
   }
 
