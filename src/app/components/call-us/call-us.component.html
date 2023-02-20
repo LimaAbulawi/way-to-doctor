@@ -1,15 +1,32 @@
 <div class="row callus">
   <div class="col-7 bg-green">
     <h6>نحن هنا من أجلك! كيف يمكننا المساعدة؟</h6>
-    <form  (submit)="sendEmail($event)">
+
+    <form (submit)="sendEmail($event)" [formGroup]="Form">
       <div class="row">
         <div class="col-12 col-md-6">
-          <input placeholder="ادخل اسمك" name="user_name">
-          <input placeholder="ادخل بريدك الالكتروني" name="user_email">
+          <!-- name is required -->
+          <label class="errorLabel "
+            [ngClass]="{'opacity_1': this.Form.get('user_name')?.touched && this.Form.get('user_name')?.hasError('required')}">
+            required *
+          </label>
+          <input placeholder="ادخل اسمك" name="user_name" formControlName="user_name"
+            [ngClass]="{'border-rose-600': this.Form.get('user_name')?.touched && this.Form.get('user_name')?.hasError('required')}">
+
+          <label class="errorLabel "
+            [ngClass]="{'opacity_1': this.Form.get('user_email')?.touched && this.Form.get('user_email')?.hasError('required')}">
+            required *
+          </label>
+          <input placeholder="ادخل بريدك الالكتروني" name="user_email" formControlName="user_email"
+            [ngClass]="{'border-rose-600': this.Form.get('user_email')?.touched && this.Form.get('user_email')?.hasError('required')}">
         </div>
         <div class="col-12  col-md-6">
-          <textarea name="message" id="" cols="30" rows="4">
-                        اكتب رسالتك
+          <label class="errorLabel "
+          [ngClass]="{'opacity_1': this.Form.get('message')?.touched && this.Form.get('message')?.hasError('required')}">
+          required *
+        </label>
+          <textarea name="message" id="" cols="30" rows="4" formControlName="message" placeholder=" اكتب رسالتك "
+            [ngClass]="{'border-rose-600': this.Form.get('message')?.touched && this.Form.get('message')?.hasError('required')}">
                     </textarea>
         </div>
         <div class="col-12">
@@ -18,6 +35,7 @@
         </div>
       </div>
     </form>
+
     <div class="contact">
       <div>Jordan - Amman</div>
       <div>+962780190006</div>

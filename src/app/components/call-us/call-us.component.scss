@@ -30,9 +30,22 @@
 
 .bg-green input,
 .bg-green textarea {
-    border: none;
+    border-width: 1px;
+    border-color: transparent;
     width: 100%;
-    margin-top: 16px;
+    // margin-top: 16px;
     padding: 15px 21px;
     border-radius: 10px;
+}
+.border-rose-600{
+    border: 1px solid red !important;
+}
+.errorLabel{
+    opacity: 0;
+    color: red;
+}
+.opacity_1{
+    opacity: 1;
+    display: block;
+    text-align: right;
 }
