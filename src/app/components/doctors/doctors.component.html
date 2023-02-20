@@ -1,9 +1,9 @@
 <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide class="custom" *ngFor="let res of response">
         <div class="slide">
-            <img class="img-responsive cover" src="{{ basicUrl }}/{{res.image}}" />
+            <div class="doctor-img" style="background-image: url({{ basicUrl }}/{{res.image}});"></div>
             <h4>{{res.name}}</h4>
-            <h6 style="color: #969595;">{{res.description}}</h6>
+            <!-- <h6 class="doctor-des" style="color: #969595;">{{res.description}}</h6> -->
         </div>
     </ng-template>
 </owl-carousel-o>

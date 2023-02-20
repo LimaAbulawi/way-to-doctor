@@ -6,3 +6,21 @@
     font-size: 1.8rem;
     font-weight: 600;
 }
+
+h6.doctor-des {
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.doctor-img {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
